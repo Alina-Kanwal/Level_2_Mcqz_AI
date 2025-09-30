@@ -21,3 +21,13 @@ OpenAI Agents SDK me execution orchestration actually 2 level par hoti hai:
 🧠 Level 1: Agent ka apna orchestrator
 Har Agent ke andar ek local orchestrator hota hai (SDK logic)
 jo usi agent ke tools, hooks, aur context manage karta hai.
+⚙️ Level 2: Runner orchestrates full workflow
+Agar tum runner.run() use karte ho ek complex multi-agent system me,
+to runner global orchestrator ki tarah kaam karta hai.
+Runner ek umbrella hai jo har agent ke orchestration ko manage karta hai
+— jaise ek “conductor” jo har musician (agent) ke local orchestration ko control karta hai.
+✅ One-Line Summary:
+Har Agent ke paas apna orchestration logic hota hai,
+lekin Runner sab agents ke orchestration ko globally coordinate karta hai.
+
+

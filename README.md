@@ -100,6 +100,9 @@ Python tool run karta hai aur result laata hai.
 Tool ka result LLM ko milta hai taake wo final jawab bana sake.
 6️⃣ LLM → Agent → User
 LLM final answer banata hai aur agent user ko deta hai.
+🔹 Python-First Orchestration
+“Python-first orchestration” ka matlab hai —
+kaam ka control aur execution Python ke haath me hai, LLM ke nahi.
 
 
 

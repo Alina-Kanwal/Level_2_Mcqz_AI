@@ -6,12 +6,7 @@ So Agent ka role hai:
 🧩 Decision Making, 📖 Instructions follow karna, 💬 User se baat karna, 🧠 LLM reasoning karna
 Orchestrator = Hath (jo plan implement karta hai)
 Yani — Agent ne jo bola (“ye tool chalao”), orchestrator actually wo kaam execute karta hai safely aur correctly.
-🔄 Execution control
-🧱 Tool run karna (sync / async)
-🧩 Context update karna
-⚠️ Error handle karna
-🤝 Handoff manage karna
-""
+🔄 Execution control, 🧱 Tool run karna (sync / async), 🧩 Context update karna, ⚠️ Error handle karna, 🤝 Handoff manage karna
 🔹 "Orchestrator" kiss kay pass hota hy?
 Har agent ka apna orchestrator hota hai.
 Lekin agar multiple agents ek workflow me mil kar kaam kar rahe hain (handoff ho raha hai),
@@ -32,13 +27,13 @@ Runner ek umbrella hai jo har agent ke orchestration ko manage karta hai
 ✅ One-Line Summary:
 Har Agent ke paas apna orchestration logic hota hai,
 lekin Runner sab agents ke orchestration ko globally coordinate karta hai.
-⚙️ 2. Core Components (Architecture ke main blocks)
+🔹 “Architecture 
+“Architecture ka matlab hai — system ka design aur structure, jisme ye define hota hai ke har hissa kya karta hai aur wo mil kar kaise kaam karta hai.”
+Core Components (Architecture ke main blocks)
 Agent, Tool, HandOff, Runner, Hooks, Context, Function Tool Decorator (@function_tool
 User Query → Agent → LLM Reasoning → Tool Call (optional) → 
 Result Handling → Output or Handoff to another Agent
-🔹 "Hallucination"
-Hallucination ka matlab hai jab LLM (jaise GPT) apni taraf se galt ya jhooti information bana deta hai,
-bhale hi wo confident lagti ho — lekin asal me data ya facts par based nahi hoti.
+-----------------------------------------------------------------------LLM and PYTHON
 🧠 1. LLM ka role — “Kya karna hai”
 LLM (Agent ke andar) sirf reasoning aur decision-making karta hai.
 Ye bas plan banata hai aur batata hai ke “mujhe kya karna hai.”
@@ -74,6 +69,7 @@ So ✅ tumhara statement bilkul sahi hai:
 Python karta hai kaise karna hai —
 Instructions Agent ke through pass hoti hain,
 aur actual kaam Python karta hai.”
+------------------------------------------------------------------------------------Runner ka Role
 3️⃣ Runner ka role — executor
 Runner SDK ka execution engine hai.
 Wo LLM ke decision ko le kar:
@@ -82,6 +78,43 @@ Input validate karta hai
 Result context me save karta hai
 Agar error aaye to handle karta hai
 Handoff hua to agla agent activate karta hai
+🔹"Hallucination"
+Hallucination ka matlab hai jab LLM (jaise GPT) apni taraf se galt ya jhooti information bana deta hai,
+bhale hi wo confident lagti ho — lekin asal me data ya facts par based nahi hoti.
+-----------------------------------------------------------------------------------------🔹 “Flow”
+Flow ka matlab hota hai —
+data ya control kis direction me aur kis order me move kar raha hai.
+Ya simple lafzon me:
+System ke andar “pehle kya hota hai”, “baad me kya hota hai”, aur “kis sequence me kaam chal raha hai” —
+ye sab flow kehlata hai.
+This is called flow 
+1️⃣ User → Agent
+Inquiry agent ke paas aayi.
+2️⃣ Agent → LLM (thinking)
+LLM ne plan banaya: “Weather tool call karna hai.”
+3️⃣ LLM → Runner (Python orchestrator)
+LLM ne decide kiya, ab Python orchestration us plan ko execute karegi.
+4️⃣ Runner → Tool (get_weather)
+Python tool run karta hai aur result laata hai.
+5️⃣ Tool → Runner → LLM
+Tool ka result LLM ko milta hai taake wo final jawab bana sake.
+6️⃣ LLM → Agent → User
+LLM final answer banata hai aur agent user ko deta hai.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

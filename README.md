@@ -122,12 +122,18 @@ jisme LLM sirf thinking part hai.
 Agent ek control layer hai jo LLM, tools aur orchestration ke darmiyan bridge ka kaam karta hai, taake user ki query ka sahi jawab generate aur deliver ho sake.
 ✅ “Role”
 Agent LLM ko guide karta hai, instructions aur tools define karta hai, orchestration ke zariye reasoning flow control karta hai, aur akhir me final answer user tak pohanchata hai.
-🧰 TOOLS
+------------------------------------------------------------------------------------🧰 TOOLS
 📘 Definition:
 Tools wo functions ya external capabilities hain jo agent system ke andar real-world actions perform karte hain.
 🎯 Role:
 jaise API calls, database queries, calculations, file operations, ya koi bhi external task jo LLM ya agent directly nahi karte.
-juuu
+1. 🔍 Data Fetching -//External source say data lana jaisay weather, news, stocks, etc.
+2. 🧮 Operations & Computations -//operations perform karna jaisy multiplication, data processing, summarization etc.
+3. 🌐 API & Service Integration -// Backend APIs, third-party services, ya internal systems se connect karna.
+4. 🗂️ File & Data Management – // Files read/write karna, documents analyze karna, ya structured data handle karna.
+5. 🔁 Automation Tasks –// Repetitive workflows ya multi-step actions automate karna (wo tools banana jo ek baar likhne ke baad complex ya repeat hone wale kaam automatically kar dein.)
+6. 🧰 Specialized Domain Functions –//Specific kaam ke liye custom tools — jaise translation, code execution, ya image processing.
+ 
 
 
 

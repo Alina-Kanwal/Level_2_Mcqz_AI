@@ -127,6 +127,7 @@ Agent LLM ko guide karta hai, instructions aur tools define karta hai, orchestra
 Tools wo functions ya external capabilities hain jo agent system ke andar real-world actions perform karte hain.
 🎯 Role:
 jaise API calls, database queries, calculations, file operations, ya koi bhi external task jo LLM ya agent directly nahi karte.
+juuu
 
 
 

@@ -133,6 +133,24 @@ jaise API calls, database queries, calculations, file operations, ya koi bhi ext
 4. 🗂️ File & Data Management – // Files read/write karna, documents analyze karna, ya structured data handle karna.
 5. 🔁 Automation Tasks –// Repetitive workflows ya multi-step actions automate karna (wo tools banana jo ek baar likhne ke baad complex ya repeat hone wale kaam automatically kar dein.)
 6. 🧰 Specialized Domain Functions –//Specific kaam ke liye custom tools — jaise translation, code execution, ya image processing.
+7. --------------------------------------------------------------------------------🤝 HANDOFFS
+📘 Definition:
+🔄 Control Transfer
+🧠 Delegation Decision //Decide karta hai kab aur kis query par handoff karna hai (LLM ya rules ke zariye).
+🧩 Context Passing //Current context aur relevant information sub-agent ko transfer karta ha
+🕹️ Scoped Responsibility //Har sub-agent sirf apne defined domain me kaam karta hai (e.g., finance-agent, travel-agent).
+🔁 Result Integration //Sub-agent ka result wapas main-agent ko diya jata hai taake final answer me use ho.
+⚙️ Orchestration Flow Support //Python orchestration handoff ke zariye multi-agent flow manage karti hai.
+✅ Usage
+🤖 Specialized Task Delegation //Jab ek query kisi specific sub-agent ke domain me ho
+🧠 Modular Design //System ko divide karna — har agent ek domain handle kare
+🔄 Multi-Agent Collaboration //Multiple agents ek complex task mil kar complete karte hain
+📤 Context Sharing main agent current query aur context ko sub-agent tak forward karta hai taake sub-agent sahi response de sake.
+
+ 
+  
+
+   
  
 
 

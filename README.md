@@ -103,7 +103,30 @@ LLM final answer banata hai aur agent user ko deta hai.
 🔹 Python-First Orchestration
 “Python-first orchestration” ka matlab hai —
 kaam ka control aur execution Python ke haath me hai, LLM ke nahi.
-
+---------------------------------------------------------------------------------🔹 1. Agent
+Agent in chhezon pr mushtamil hota hy. 
+Agent = brain + tools + instructions + control
+Agent ek complete personality ya system hai,
+jisme LLM sirf thinking part hai.
+⚙️ Usage:
+🔹 1. LLM Guidance (Reasoning Direction)
+🔹 2. Instructions Management
+🔹 3. Tools & Handoffs Definition
+🔹 4. Python Orchestration & Execution //LLM ke decisions ka execution flow krna, kaam kis order me aur kis condition pe chalega..
+🔹 5. Final Answer Delivery //jb ans tools ya handoff ky process ky bad ata hy tw llm usko final_output bnata hy. 
+🔹 6. Context & Memory Handling //context aur memory manage karta hai, past information ko use kar sake aur consistent rahe.
+🔹 7. Error & Exception Handling // Agar koi tool fail ho jaye ya reasoning me issue aaye, Agent fallback aur recovery logic handle karta hai.
+🔹 8. Delegation & Multi-Agent Coordination // Handoff
+🔹 9. Tracing & Observability // Agent tracing aur debugging ke liye hooks support karta hai (e.g., AgentHooks, RunHooks).Ye developers ko execution monitor karne me madad karta hai.
+✅ “Definition”
+Agent ek control layer hai jo LLM, tools aur orchestration ke darmiyan bridge ka kaam karta hai, taake user ki query ka sahi jawab generate aur deliver ho sake.
+✅ “Role”
+Agent LLM ko guide karta hai, instructions aur tools define karta hai, orchestration ke zariye reasoning flow control karta hai, aur akhir me final answer user tak pohanchata hai.
+🧰 TOOLS
+📘 Definition:
+Tools wo functions ya external capabilities hain jo agent system ke andar real-world actions perform karte hain.
+🎯 Role:
+jaise API calls, database queries, calculations, file operations, ya koi bhi external task jo LLM ya agent directly nahi karte.
 
 
 

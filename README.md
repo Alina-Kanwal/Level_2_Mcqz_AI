@@ -1,12 +1,6 @@
-🔹"Orchestrator" منتظم", "نظم کرنے والا", ya "ہم آہنگ کرنے والا
-agent kam deta hy. orchestrator decide krta hy kaam kaisay krna hy.
-Agent = Dimag (jo plan banata hai)
-Orchestrator = Hath (jo plan implement karta hai)
+gent = Dimag (jo plan banata hai)
 So Agent ka role hai:
 🧩 Decision Making, 📖 Instructions follow karna, 💬 User se baat karna, 🧠 LLM reasoning karna
-Orchestrator = Hath (jo plan implement karta hai)
-Yani — Agent ne jo bola (“ye tool chalao”), orchestrator actually wo kaam execute karta hai safely aur correctly.
-🔄 Execution control, 🧱 Tool run karna (sync / async), 🧩 Context update karna, ⚠️ Error handle karna, 🤝 Handoff manage karna
 🔹 "Orchestrator" kiss kay pass hota hy?
 Har agent ka apna orchestrator hota hai.
 Lekin agar multiple agents ek workflow me mil kar kaam kar rahe hain (handoff ho raha hai),
@@ -146,16 +140,30 @@ jaise API calls, database queries, calculations, file operations, ya koi bhi ext
 🧠 Modular Design //System ko divide karna — har agent ek domain handle kare
 🔄 Multi-Agent Collaboration //Multiple agents ek complex task mil kar complete karte hain
 📤 Context Sharing main agent current query aur context ko sub-agent tak forward karta hai taake sub-agent sahi response de sake.
-------------------------------------------------------------------------------------1. run_sync
-First understand this
-LLM = Brain (jo sochta hai)
-Runner = Hands (jo kaam karta hai)
-Orchestrator = Manager (jo decide karta hai kis time kya karwana hai)   
-📘 Definition:
-run_sync = synchronus
-run = asynchrounus    
-run_sync() use karti ho, to code us waqt ruk jaata hai jab tak wo task ya tool ka result mil nahi jaata.
-Uske baad hi agla step chalta hai.   
+------------------------------------------------------------------------------------1. Orchestrator
+🔹 Definition:
+Runner ek execution engine hota hai jo LLM aur tools ke beech coordination karta hai.
+Ye LLM ke instructions ko follow karke tools chalata hai, context update karta hai, aur final output LLM ko wapas deta hai.
+🔹 Kaam:
+🔄 Execution control: Step-by-step process manage karta hai.
+🧱 Tool run karna: LLM ke kehne par tool execute karta hai (sync/async).
+🧩 Context maintain / update karna: Har step ke baad memory aur conversation context refresh karta hai.
+⚠️ Error handling: Agar tool ya LLM step fail ho, to safely handle karta hai.
+🤝 Handoff manage karna: Zarurat par control doosre agent / tool ko transfer karta hai.
+📤 LLM–Tool communication: Tool ka result LLM ko deta hai aur final response receive karta hai.
+💡 Runner = “System ka haath aur manager” — jo LLM ke kehne par har action execute karta hai.
+🐍 Orchestrator – Definition & Role
+🔹 Definition:
+Orchestrator high-level controller hota hai jo poori process ko initiate aur manage karta hai.
+Ye runner create karta hai, LLM / agent / tools ko connect karta hai, aur final result user tak pohchata hai.
+🔹 Kaam:
+▶️ Execution start karna: runner.run_sync() ya similar call se process initiate karna.
+🧠 Model aur tools attach karna: Kaun sa model aur tools use honge, ye setup karna.
+🪄 Agent / runner configure karna: Runners, agents, aur tools ko ek structure mein connect karna.
+📥 Result receive karna: Runner se final output lena.
+📤 User ko result dena: Output user ya UI ko return karna.
+💡 Orchestrator = “System ka controller” — jo kaam shuru karta hai aur result deliver karta hai, lekin khud execute nahi karta. 
+ 
 
  
   

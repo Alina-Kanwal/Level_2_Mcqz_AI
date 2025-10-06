@@ -146,6 +146,16 @@ jaise API calls, database queries, calculations, file operations, ya koi bhi ext
 🧠 Modular Design //System ko divide karna — har agent ek domain handle kare
 🔄 Multi-Agent Collaboration //Multiple agents ek complex task mil kar complete karte hain
 📤 Context Sharing main agent current query aur context ko sub-agent tak forward karta hai taake sub-agent sahi response de sake.
+------------------------------------------------------------------------------------1. run_sync
+First understand this
+LLM = Brain (jo sochta hai)
+Runner = Hands (jo kaam karta hai)
+Orchestrator = Manager (jo decide karta hai kis time kya karwana hai)   
+📘 Definition:
+run_sync = synchronus
+run = asynchrounus    
+run_sync() use karti ho, to code us waqt ruk jaata hai jab tak wo task ya tool ka result mil nahi jaata.
+Uske baad hi agla step chalta hai.   
 
  
   

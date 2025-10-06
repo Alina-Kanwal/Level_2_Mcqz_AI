@@ -140,7 +140,7 @@ jaise API calls, database queries, calculations, file operations, ya koi bhi ext
 🧠 Modular Design //System ko divide karna — har agent ek domain handle kare
 🔄 Multi-Agent Collaboration //Multiple agents ek complex task mil kar complete karte hain
 📤 Context Sharing main agent current query aur context ko sub-agent tak forward karta hai taake sub-agent sahi response de sake.
-------------------------------------------------------------------------------------1. Orchestrator
+------------------------------------------------------------------------------------1. Runner
 🔹 Definition:
 Runner ek execution engine hota hai jo LLM aur tools ke beech coordination karta hai.
 Ye LLM ke instructions ko follow karke tools chalata hai, context update karta hai, aur final output LLM ko wapas deta hai.
@@ -153,16 +153,18 @@ Ye LLM ke instructions ko follow karke tools chalata hai, context update karta h
 📤 LLM–Tool communication: Tool ka result LLM ko deta hai aur final response receive karta hai.
 💡 Runner = “System ka haath aur manager” — jo LLM ke kehne par har action execute karta hai.
 🐍 Orchestrator – Definition & Role
+------------------------------------------------------------------------------------- Orchestrator
 🔹 Definition:
 Orchestrator high-level controller hota hai jo poori process ko initiate aur manage karta hai.
 Ye runner create karta hai, LLM / agent / tools ko connect karta hai, aur final result user tak pohchata hai.
 🔹 Kaam:
 ▶️ Execution start karna: runner.run_sync() ya similar call se process initiate karna.
-🧠 Model aur tools attach karna: Kaun sa model aur tools use honge, ye setup karna.
+🧠 🧠 Model aur tools attach karna: Orchestrator system mein ye setup karta hai ke kaunsa model aur tools available honge — taake LLM unhe reasoning aur execution ke dauran use kar sake.
 🪄 Agent / runner configure karna: Runners, agents, aur tools ko ek structure mein connect karna.
 📥 Result receive karna: Runner se final output lena.
 📤 User ko result dena: Output user ya UI ko return karna.
-💡 Orchestrator = “System ka controller” — jo kaam shuru karta hai aur result deliver karta hai, lekin khud execute nahi karta. 
+💡 Orchestrator = “System ka controller” — jo kaam shuru karta hai aur result deliver karta hai, lekin khud execute nahi karta.
+
  
 
  
